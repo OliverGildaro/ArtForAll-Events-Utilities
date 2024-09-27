@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ArtForAll.Generators": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\ArtForAll.Generators.Client\\ArtForAll.Generators.Client.csproj"
+    }
+  }
+}

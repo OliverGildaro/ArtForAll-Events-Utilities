@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C0AF584A-D52A-468B-BDCE-DBAB9A7804B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3DA03131-B495-482F-8373-582F3664DCA3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArtForAll.Shared.ExceptionHandler", "src\ArtForAll.Shared.ExceptionHandler\ArtForAll.Shared.ExceptionHandler.csproj", "{4B2353F8-204A-40A9-AAD2-7554DD664A9D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArtForAll.Exception.Tests", "tests\ArtForAll.Exception.Tests\ArtForAll.Exception.Tests.csproj", "{5790A1F5-66F7-42BB-8623-7F84D2EDBA34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4B2353F8-204A-40A9-AAD2-7554DD664A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B2353F8-204A-40A9-AAD2-7554DD664A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B2353F8-204A-40A9-AAD2-7554DD664A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B2353F8-204A-40A9-AAD2-7554DD664A9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5790A1F5-66F7-42BB-8623-7F84D2EDBA34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5790A1F5-66F7-42BB-8623-7F84D2EDBA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5790A1F5-66F7-42BB-8623-7F84D2EDBA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5790A1F5-66F7-42BB-8623-7F84D2EDBA34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4B2353F8-204A-40A9-AAD2-7554DD664A9D} = {C0AF584A-D52A-468B-BDCE-DBAB9A7804B9}
+		{5790A1F5-66F7-42BB-8623-7F84D2EDBA34} = {3DA03131-B495-482F-8373-582F3664DCA3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20ABF950-662C-490F-AC69-F7D8207160B0}
+	EndGlobalSection
+EndGlobal
