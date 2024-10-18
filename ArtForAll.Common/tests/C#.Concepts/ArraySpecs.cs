@@ -7,8 +7,12 @@ namespace C_.Concepts
         [Fact]
         public void ReverseArray()
         {
-            int[] array = new CustomArray().GetIntegers();
-            var reverse = array.Reverse();
+            int[] array = new int[]  { 5, 2, 9, 1, 5, 6 };
+            var reverse = array.Reverse().ToArray();
+            for(int i=0; i<array.Length; i++)
+            {
+                Assert.Equal(array[i], reverse[reverse.Length-i-1]);
+            }
             Assert.Equal(reverse.Last(), array.First());
         }
 
@@ -20,6 +24,21 @@ namespace C_.Concepts
             Assert.Equal(array, array2);
         }
 
+                [Fact]
+        public void SetValueArray()
+        {
+            int[] array = new CustomArray().GetIntegers();
+            array.SetValue(3, 5);
+            Assert.Equal(1, array[3]);
+        }
+
+        [Fact]
+        public void GetValueArray()
+        {
+            int[] array = new CustomArray().GetIntegers();
+            object val = array.GetValue(3);
+            Assert.Equal(1, val);
+        }
 
         [Fact]
         public void IndexOfArray()
@@ -51,46 +70,44 @@ namespace C_.Concepts
         }
 
         [Fact]
-        public void SetValueArray()
+        public void SortArray()
         {
             int[] array = new CustomArray().GetIntegers();
-            array.SetValue(3, 5);
-            Assert.Equal(1, array[3]);
+            Array.Sort(array);
+            Assert.Equal(1, array[0]);
+            Assert.Equal(2, array[1]);
+            Assert.Equal(5, array[2]);
+            Assert.Equal(5, array[3]);
+        }
+
+
+        [Fact]
+        public void SortCustomArray()
+        {
+            var customArray = new CustomArray();
+            var arrayInt = customArray.GetIntegers();
+            customArray.Sort(arrayInt);
+
+            Assert.Equal(1, arrayInt[0]);
+            Assert.Equal(2, arrayInt[1]);
+            Assert.Equal(5, arrayInt[2]);
         }
 
         [Fact]
-        public void GetValueArray()
+        public void ReverseCustomArray()
         {
-            int[] array = new CustomArray().GetIntegers();
-            object val = array.GetValue(3);
-            Assert.Equal(1, val);
+            var customArray = new CustomArray();
+            var arrayInt = customArray.GetIntegers();
+            var reverse = customArray.Reverse(arrayInt);
+
+            Assert.Equal(6, arrayInt[0]);
+            Assert.Equal(5, arrayInt[1]);
+            Assert.Equal(1, arrayInt[2]);
         }
     }
 }
-//// Length
-//Console.WriteLine($"Length: {numbers.Length}");
-
-//// Sort
-//Array.Sort(numbers);
-//Console.WriteLine("Sorted: " + string.Join(", ", numbers));
-
-//// Reverse
-//Array.Reverse(numbers);
-//Console.WriteLine("Reversed: " + string.Join(", ", numbers));
-
-//// Clear
-//Array.Clear(numbers, 1, 3);
-//Console.WriteLine("Cleared: " + string.Join(", ", numbers));
-
-//// IndexOf
-//int index = Array.IndexOf(numbers, 5);
-//Console.WriteLine($"Index of 5: {index}");
-
-//// Copy
-//int[] copy = new int[numbers.Length];
-//Array.Copy(numbers, copy, numbers.Length);
-//Console.WriteLine("Copy: " + string.Join(", ", copy));
-
-//// BinarySearch
-//int position = Array.BinarySearch(copy, 9); // Searching for an element
-//Console.WriteLine($"Position of 9: {position}");
+//All arays are referebced types
+//An array size is fixed, canot change
+//if you need a big array, you need to copy all elements to the new array
+//Array is allocated in the heap, creation of array happens upon using new
+//ARrays are zero-based always start in 0 index
