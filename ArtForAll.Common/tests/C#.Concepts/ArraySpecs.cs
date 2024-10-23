@@ -28,8 +28,8 @@ namespace C_.Concepts
         public void SetValueArray()
         {
             int[] array = new CustomArray().GetIntegers();
-            array.SetValue(3, 5);
-            Assert.Equal(1, array[3]);
+            array.SetValue(22, 5);
+            Assert.Equal(22, array[5]);
         }
 
         [Fact]
