@@ -1,7 +1,3 @@
-
-
-
-
 using Newtonsoft.Json.Linq;
 
 namespace ErrorHandler.Evaluations
@@ -27,6 +23,8 @@ namespace ErrorHandler.Evaluations
 
             handObj.GenerateGame();
             handObj2.GenerateGame();
+
+            return new string[] { };
         }
     }
 
@@ -108,11 +106,10 @@ namespace ErrorHandler.Evaluations
                 {
                     handRes = new HandResult()
                     {
-                        Category = Numbers.
-                    }
+                    };
                 }
             }
-            return 
+            return null;
         }
     }
 

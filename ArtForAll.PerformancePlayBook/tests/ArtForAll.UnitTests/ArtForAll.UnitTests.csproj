@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\ArtForAll.Events.Shared.ErrorHandler\ArtForAll.Shared.ErrorHandler.csproj" />
+    <ProjectReference Include="..\..\src\ArtForAll.PerformancePB.Code\ArtForAll.PerformancePB.Code.csproj" />
   </ItemGroup>
 
   <ItemGroup>

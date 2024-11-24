@@ -1,6 +1,8 @@
+using ArtForAll.Shared.ErrorHandler.Results;
+
 namespace ArtForAll.Shared.ErrorHandler
 {
-    public class Result<T, E>
+    public class Result<T, E> : IResult<T, E>
         where T : class
         where E : class
     {
