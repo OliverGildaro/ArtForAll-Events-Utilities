@@ -34,7 +34,7 @@ namespace ArtForAll.Shared.Contracts.DDD
         public static Error Deserialize(string serialized)
         {
             if (serialized == "A non-empty request body is required.")
-                return Errors.General.ValueIsRequired();
+                return new Error("Value is required", "");
 
             string[] data = serialized.Split(new[] { separator }, StringSplitOptions.RemoveEmptyEntries);
 
